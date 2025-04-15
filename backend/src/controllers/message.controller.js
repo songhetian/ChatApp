@@ -19,7 +19,7 @@ export const getMessages = async (req, res) => {
 		const messages = await Message.find({
 			$or: [
 				// 在MongoDB中，ObjectId需要进行类型转换才能正确比较
-				// 使用toString()方法将ObjectId转换为字符串进行比较
+				// 使用toString()方法将ObjectId转换为字符串进行比较1
 				{
 					senderId: req.user._id.toString(),
 					receiverId: req.params.id.toString()
